@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YesPreet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main class="relative">
+      <!-- Header Starts Here -->
+      <header>
+        <nav
+          class="w-full px-20 max-[599px]:px-6 py-4 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between"
+        >
+          <div class="logo">
+            <h1
+              class="text-[2.5vw] max-[599px]:text-[6.5vw] leading-tight font-bold text-pink-600"
+            >
+              yes<span class="text-blue-500">preet</span>
+            </h1>
+          </div>
+          <div class="mobileMenu w-[8%] hidden max-[599px]:block text-black">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </div>
+          <div
+            class="navLinksWrapper flex gap-14 items-center max-[599px]:hidden"
+          >
+            <div class="links flex gap-8 text-[1vw] items-center">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Categories</a>
+              <a href="#">All Services</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Gallery</a>
+            </div>
+            <div class="authBtn flex gap-4 items-center">
+              <button class="px-4 py-2 border-2 border-pink-600 rounded-md">
+                Login
+              </button>
+              <button
+                class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-md"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Header Ends Here -->
+
+      <!-- Hero Section Starts Here -->
+      <section class="w-full h-[90vh] relative overflow-hidden">
+        <!-- Swiper for Background Images -->
+        <div class="swiper mySwiper absolute top-0 left-0 w-full h-full z-0">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide w-full h-full bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1707979577466-2d6109c68a45?q=80&w=2070');
+              "
+            ></div>
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide w-full h-full bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            ></div>
+            <!-- Slide 3 -->
+            <div
+              class="swiper-slide w-full h-full bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            ></div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="relative pointer-events-none z-20 w-full h-full flex max-[599px]:flex-col-reverse items-center px-20 max-[599px]:px-6 py-10 max-[599px]:py-6"
+          style="background: linear-gradient(to right, #db2777 40%, #ffffff2b 70%);"
+        >
+          <div
+            class="text w-[60%] max-[599px]:w-full h-full justify-center flex flex-col pl-36 max-[599px]:pl-0"
+          >
+            <h5
+              class="text-[1vw] max-[599px]:text-[6.5vw] leading-tight text-white"
+            >
+              HAIR SALON, MASSEUSE, BEAUTY SALON
+            </h5>
+            <h1
+              class="text-[3.5vw] max-[599px]:text-[10vw] leading-tight font-bold text-white"
+            >
+              Find a service<br />close to you
+            </h1>
+            <p class="text-[1vw] max-[599px]:text-[4vw] text-white mt-4">
+              There are many variation of passages are Ipsum available,<br />majority
+              have suffered alteration in some form.
+            </p>
+
+            <!-- Search Box -->
+            <div
+              class="bg-white pointer-events-auto rounded-full flex items-center justify-between mt-8 w-[60%] max-[599px]:w-full pr-2 pl-8 py-2 shadow-md gap-4"
+            >
+              <div class="flex flex-col w-full">
+                <label class="text-pink-600 font-semibold text-sm mb-1"
+                  >Service Name</label
+                >
+                <div class="flex items-center border-b border-gray-400">
+                  <input
+                    type="text"
+                    placeholder="Book your services..."
+                    class="w-full outline-none text-sm text-gray-700 placeholder:text-gray-400 pb-1"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="w-4 h-4 text-gray-600"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Search Button -->
+              <button
+                class="bg-pink-600 hover:bg-pink-700 transition-all text-white font-semibold px-10 py-3 rounded-full flex items-center gap-4"
+              >
+                Search
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section Ends Here -->
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+    });
+  </script>
+</html>
