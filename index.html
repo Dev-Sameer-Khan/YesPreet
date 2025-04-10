@@ -41,10 +41,12 @@
       <nav
         class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
         <div class="logo">
-          <h1
-            class="text-[2.5vw] max-[1024px]:text-[4vw] max-[599px]:text-[6.5vw] leading-tight font-bold text-pink-600">
-            yes<span class="text-blue-500">preet</span>
-          </h1>
+          <a href="index.html">
+            <h1
+              class="text-[2.5vw] max-[1024px]:text-[4vw] max-[599px]:text-[6.5vw] leading-tight font-bold text-pink-600">
+              yes<span class="text-blue-500">preet</span>
+            </h1>
+          </a>
         </div>
 
         <!-- Mobile & Tablet Menu Icon -->
@@ -65,12 +67,12 @@
         <!-- Desktop Nav -->
         <div class="navLinksWrapper flex gap-10 items-center max-[1024px]:hidden">
           <div class="links flex gap-8 text-[1vw] items-center">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Categories</a>
-            <a href="#">All Services</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Gallery</a>
+            <a class="hover:text-pink-600 transition-all" href="index.html">Home</a>
+            <a class="hover:text-pink-600 transition-all" href="About.html">About Us</a>
+            <a class="hover:text-pink-600 transition-all" href="Category.html">Categories</a>
+            <a class="hover:text-pink-600 transition-all" href="All Services.html">All Services</a>
+            <a class="hover:text-pink-600 transition-all" href="Contact.html">Contact Us</a>
+            <a class="hover:text-pink-600 transition-all" href="Gallery.html">Gallery</a>
           </div>
           <div class="authBtn flex gap-4 items-center">
             <button
@@ -84,12 +86,12 @@
       <!-- Mobile & Tablet Menu -->
       <div id="mobileNav"
         class="hidden flex flex-col gap-6 px-6 py-4 bg-white fixed top-0 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[4vw] max-[599px]:text-[5vw]">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Categories</a>
-        <a href="#">All Services</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Gallery</a>
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Category.html">Categories</a>
+        <a href="All Services.html">All Services</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Gallery.html">Gallery</a>
         <button
           class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full w-fit">
           Login Now
@@ -801,7 +803,7 @@
 
           <!-- Slide Start -->
           <div
-            class="swiper-slide bg-[#d41475] text-white rounded-[2rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-10 justify-between">
+            class="swiper-slide bg-[#d41475] text-white rounded-[2rem] p-10 md:p-20 flex flex-col md:flex-row items-center gap-10 justify-between">
 
             <!-- Graphic + Image -->
             <div class="relative">
@@ -831,7 +833,7 @@
           <!-- Slide End -->
           <!-- Slide Start -->
           <div
-            class="swiper-slide bg-[#d41475] text-white rounded-[2rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-10 justify-between">
+            class="swiper-slide bg-[#d41475] text-white rounded-[2rem] p-10 md:p-20 flex flex-col md:flex-row items-center gap-10 justify-between">
 
             <!-- Graphic + Image -->
             <div class="relative">
@@ -861,7 +863,7 @@
           <!-- Slide End -->
           <!-- Slide Start -->
           <div
-            class="swiper-slide bg-[#d41475] text-white rounded-[2rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-10 justify-between">
+            class="swiper-slide bg-[#d41475] text-white rounded-[2rem] p-10 md:p-20 flex flex-col md:flex-row items-center gap-10 justify-between">
 
             <!-- Graphic + Image -->
             <div class="relative">
@@ -969,14 +971,15 @@
     <!-- Footer Section Starts Here -->
     <footer class="bg-pink-600 text-white pt-14 pb-6 px-20 max-[599px]:px-6">
       <div class="max-w-7xl mx-auto px-6 max-[599px]:px-0 grid grid-cols-1 md:grid-cols-3 gap-10">
-
         <!-- Left Section -->
         <div>
           <h2 class="text-3xl font-bold">yespreet</h2>
-          <p class="italic text-[1.2vw] max-[599px]:text-[3.2vw] mt-1 mb-4">Beauty and Home Services</p>
+          <p class="italic text-[1.2vw] max-[599px]:text-[3.2vw] mt-1 mb-4">
+            Beauty and Home Services
+          </p>
           <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-5 leading-tight">
-            On-demand services cover a wide range of sectors, including transportation, food delivery, home services,
-            healthcare, and more.
+            On-demand services cover a wide range of sectors, including
+            transportation, food delivery, home services, healthcare, and more.
           </p>
           <button class="border border-white px-4 py-2 rounded hover:bg-white hover:text-[#C02F78] transition">
             Request a Service
@@ -987,10 +990,12 @@
         <div class="ml-20 max-[599px]:ml-0">
           <h3 class="text-xl font-semibold mb-4">Explore On</h3>
           <ul class="space-y-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#" class="hover:underline">About Us</a></li>
-            <li><a href="#" class="hover:underline">All Services</a></li>
-            <li><a href="#" class="hover:underline">Contact Us</a></li>
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="About.html" class="hover:underline">About Us</a></li>
+            <li><a href="Category.html" class="hover:underline">Categories</a></li>
+            <li><a href="All Services.html" class="hover:underline">All Services</a></li>
+            <li><a href="Contact.html" class="hover:underline">Contact Us</a></li>
+            <li><a href="Gallery.html" class="hover:underline">Gallery</a></li>
           </ul>
         </div>
 
@@ -998,7 +1003,8 @@
         <div>
           <h3 class="text-xl font-semibold mb-4">Contacts</h3>
           <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-2">
-            <strong>Address :</strong> Anand Vihar Colony, Dohra Road, Near Alice Green Lawn Bareilly, 243006 (UP)
+            <strong>Address :</strong> Anand Vihar Colony, Dohra Road, Near
+            Alice Green Lawn Bareilly, 243006 (UP)
           </p>
           <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-2">
             <strong>Mail :</strong> contact.yespreet@gmail.com
