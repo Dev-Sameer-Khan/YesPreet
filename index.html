@@ -8,6 +8,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
+    @font-face {
+      font-family: manrope;
+      src: url(./assets/fonts/Manrope.ttf);
+    }
+
+    @font-face {
+      font-family: playfair;
+      src: url(./assets/fonts/PlayfairDisplay.ttf);
+    }
+
+    * {
+      font-family: manrope;
+    }
+
     /* Custom Scrollbar Styles */
     ::-webkit-scrollbar {
       width: 10px;
@@ -31,11 +45,12 @@
       scrollbar-width: thin;
       scrollbar-color: #d41475 #f1f1f1;
     }
+
     @media (max-width: 599px) {
-    .overlay {
-      background:transparent !important;
+      .overlay {
+        background: transparent !important;
+      }
     }
-  }
   </style>
 </head>
 
@@ -44,7 +59,7 @@
     <!-- Header Starts Here -->
     <header>
       <nav
-        class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
+        class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-3 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
         <div class="logo">
           <a href="index.html">
             <h1
@@ -62,7 +77,7 @@
         </div>
 
         <!-- Mobile & Tablet Menu Icon -->
-        <div class="mobileMenu w-[8%] hidden max-[1024px]:block text-black cursor-pointer">
+        <div class="mobileMenu w-[+9%] hidden max-[1024px]:block text-black cursor-pointer">
           <!-- Hamburger Icon -->
           <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
             fill="currentColor">
@@ -97,7 +112,7 @@
 
       <!-- Mobile & Tablet Menu -->
       <div id="mobileNav"
-        class="hidden flex flex-col gap-6 px-6 max-[1024px]:px-10 py-4 bg-white fixed top-14 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[4vw] max-[599px]:text-[5vw]">
+        class="hidden flex flex-col gap-6 max-[599px]:px-6 max-[1024px]:px-10 py-4 bg-white fixed top-14 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[3vw] max-[599px]:text-[5vw]">
         <a href="index.html">Home</a>
         <a href="About.html">About Us</a>
         <a href="Category.html">Categories</a>
@@ -108,7 +123,7 @@
     <!-- Header Ends Here -->
 
     <!-- Hero Section Starts Here -->
-    <section class="w-full h-[90vh] max-[599px]:h-[80vh] relative overflow-hidden">
+    <section class="hero w-full h-[90vh] max-[599px]:h-[80vh] relative overflow-hidden">
       <!-- Swiper for Background Images -->
       <div class="swiper heroSwiper absolute top-0 left-0 w-full h-full z-0">
         <div class="swiper-wrapper">
@@ -129,11 +144,14 @@
       <div
         class="overlay relative pointer-events-none z-20 w-full h-full mt-6 flex max-[1024px]:flex-col-reverse items-center px-20 max-[1024px]:px-10 max-[599px]:px-6 py-10 max-[599px]:py-6"
         style="background: linear-gradient(to right, #ec407a 40%, #ffffff2b 70%);">
-        <div class="text w-[60%] max-[1024px]:w-full h-full justify-center flex flex-col pl-10 max-[1024px]:pl-0 gap-4">
-          <h5 class="text-[1.3vw] max-[1024px]:text-[2.5vw] max-[599px]:text-[3.5vw] leading-tight text-white">
-            HAIR, MASSAGE & BEAUTY — AND MORE
+        <div
+          class="text anim w-[60%] max-[1024px]:w-full h-full justify-center flex flex-col pl-10 max-[1024px]:pl-0 gap-4">
+          <h5
+            class="text-[1.3vw] max-[1024px]:text-[2.5vw] max-[599px]:text-[3.5vw] leading-tight text-white flex items-center gap-2">
+            <span><img src="./assets/images/header-logo.svg" alt=""></span>HAIR, MASSAGE & BEAUTY — AND MORE
           </h5>
-          <h1 class="text-[3.5vw] max-[1024px]:text-[5vw] max-[599px]:text-[10vw] leading-tight font-bold text-white">
+          <h1
+            class="text-[3.5vw] max-[1024px]:text-[5vw] max-[599px]:text-[10vw] leading-tight font-bold font-[playfair] text-[#F7E5C1]">
             Find top-rated beauty & home services near you
           </h1>
           <p
@@ -174,7 +192,7 @@
     <!-- Hero Section Ends Here -->
 
     <!-- Category Section Starts Here -->
-    <section class="p-20 max-[599px]:p-6 bg-white w-full">
+    <section class="fade1 p-20 max-[599px]:p-6 bg-white w-full">
       <h2
         class="text-[2.5vw] max-[599px]:text-[6.5vw] min-[600px]:max-[1023px]:text-[4vw] font-bold text-center text-pink-600">
         Category
@@ -195,10 +213,7 @@
             <!-- Slide 1 -->
             <div class="swiper-slide text-center">
               <div class="flex flex-col items-center">
-                <div class="bg-pink-100 p-6 rounded-full">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Women's Salon"
-                    class="w-12 h-12" />
-                </div>
+                <img src="./assets/images/cat1.svg" alt="">
                 <p class="mt-4 font-semibold text-[1.2vw] max-[599px]:text-[3.2vw]">
                   Women’s Salon &<br />Beauty Services
                 </p>
@@ -208,10 +223,7 @@
             <!-- Slide 2 -->
             <div class="swiper-slide text-center">
               <div class="flex flex-col items-center">
-                <div class="bg-pink-100 p-6 rounded-full">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3703/3703447.png" alt="Bridal Makeup"
-                    class="w-12 h-12" />
-                </div>
+                <img src="./assets/images/cat2.svg" alt="">
                 <p class="mt-4 font-semibold text-[1.2vw] max-[599px]:text-[3.2vw]">
                   Bridal Makeup &<br />Mehendi Art
                 </p>
@@ -221,10 +233,7 @@
             <!-- Slide 3 -->
             <div class="swiper-slide text-center">
               <div class="flex flex-col items-center">
-                <div class="bg-pink-100 p-6 rounded-full">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2975/2975175.png" alt="Men’s Grooming"
-                    class="w-12 h-12" />
-                </div>
+                <img src="./assets/images/cat3.svg" alt="">
                 <p class="mt-4 font-semibold text-[1.2vw] max-[599px]:text-[3.2vw]">
                   Men’s Grooming &<br />Salon Services
                 </p>
@@ -234,10 +243,7 @@
             <!-- Slide 4 -->
             <div class="swiper-slide text-center">
               <div class="flex flex-col items-center">
-                <div class="bg-pink-100 p-6 rounded-full">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Home Repair"
-                    class="w-12 h-12" />
-                </div>
+                <img src="./assets/images/cat4.svg" alt="">
                 <p class="mt-4 font-semibold text-[1.2vw] max-[599px]:text-[3.2vw]">
                   Home Repair &<br />Maintenance
                 </p>
@@ -247,10 +253,7 @@
             <!-- Slide 5 -->
             <div class="swiper-slide text-center">
               <div class="flex flex-col items-center">
-                <div class="bg-pink-100 p-6 rounded-full">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3429/3429336.png" alt="Fashion & Rentals"
-                    class="w-12 h-12" />
-                </div>
+                <img src="./assets/images/cat5.svg" alt="">
                 <p class="mt-4 font-semibold text-[1.2vw] max-[599px]:text-[3.2vw]">
                   Fashion &<br />Rentals
                 </p>
@@ -260,10 +263,7 @@
             <!-- Slide 6 -->
             <div class="swiper-slide text-center">
               <div class="flex flex-col items-center">
-                <div class="bg-pink-100 p-6 rounded-full">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3459/3459386.png" alt="Foot Therapist"
-                    class="w-12 h-12" />
-                </div>
+                <img src="./assets/images/cat7.svg" alt="">
                 <p class="mt-4 font-semibold text-[1.2vw] max-[599px]:text-[3.2vw]">Foot Therapist</p>
               </div>
             </div>
@@ -274,7 +274,7 @@
     <!-- Category Section Ends Here -->
 
     <!-- Best Services Section Starts Here -->
-    <section class="py-10 max-[599px]:px-6 bg-white">
+    <section class="fade2 py-10 max-[599px]:px-6 bg-white">
       <h2
         class="text-[2.5vw] max-[599px]:text-[6.5vw] min-[600px]:max-[1023px]:text-[4vw] font-bold text-center text-pink-600">
         Best Services
@@ -295,11 +295,12 @@
             <!-- Card Start -->
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -310,10 +311,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -322,11 +323,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -337,10 +339,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -349,11 +351,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -364,10 +367,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -376,11 +379,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -391,10 +395,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -403,11 +407,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -418,10 +423,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -430,11 +435,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -445,10 +451,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -456,16 +462,13 @@
             </div>
           </div>
         </div>
-
-        <!-- Navigation Arrows
-        <div class="swiper-button-prev text-zinc-800 hover:text-zinc-700  transition "></div>
-        <div class="swiper-button-next text-zinc-800 hover:text-zinc-700  transition"></div> -->
       </div>
     </section>
     <!-- Best Services Section Endss Here -->
 
     <!-- Download The APP Section Starts Here -->
-    <section class="bg-white max-[599px]:p-6 min-[600px]:max-[1023px]:px-10 py-10 flex items-center justify-center">
+    <section
+      class="fade3 bg-white max-[599px]:p-6 min-[600px]:max-[1023px]:px-10 py-10 flex items-center justify-center">
       <div
         class="w-[70%] max-[599px]:w-full min-[600px]:max-[1023px]:w-[90%] flex flex-col md:flex-row items-center justify-between gap-10">
 
@@ -515,7 +518,7 @@
     <!-- Download The APP Section Ends Here -->
 
     <!-- Why Choose Us Section Starts Here -->
-    <section class="p-20 max-[599px]:p-6">
+    <section class="fade4 p-20 max-[599px]:p-6">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 bg-blue-100">
         <!-- Left Image -->
         <div class="flex-1">
@@ -606,7 +609,7 @@
     <!-- Why Choose Us Section Enss Here -->
 
     <!-- Featured Services Section Starts Here -->
-    <section class="py-10 max-[599px]:px-6 bg-white">
+    <section class="fade5 py-10 max-[599px]:px-6 bg-white">
       <h2
         class="text-[2.5vw] max-[599px]:text-[6.5vw] min-[600px]:max-[1023px]:text-[4vw] font-bold text-center text-pink-600">
         Featured Services
@@ -627,11 +630,12 @@
             <!-- Card Start -->
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -642,10 +646,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -654,11 +658,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -669,10 +674,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -681,11 +686,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -696,10 +702,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -708,11 +714,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -723,10 +730,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -735,11 +742,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -750,10 +758,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -762,11 +770,12 @@
 
             <div class="swiper-slide">
               <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="relative">
-                  <img src="https://img.freepik.com/free-photo/tools-hairdressing-salon_144627-32766.jpg"
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
                     alt="Basic Hair Cut" class="w-full h-44 object-cover" />
                   <span
-                    class="absolute top-2 left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold px-2 py-1 rounded">
+                    class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
                     10% Off
                   </span>
                 </div>
@@ -777,10 +786,10 @@
                   </p>
                   <div class="mt-2 text-[1.2vw] max-[599px]:text-[3.2vw]">
                     <span class="text-pink-700 font-bold">₹ 225</span>
-                    <span class="text-gray-500 line-through ml-2">₹249</span>
+                    <span class="text-blue-500 line-through ml-2">₹249</span>
                   </div>
                   <button
-                    class="mt-4 border-2 border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
+                    class="mt-4 border-[1px] border-pink-700 hover:bg-pink-700 transition-all hover:text-white text-pink-700 py-2 px-4 rounded-md w-full text-[1.2vw] max-[599px]:text-[3.2vw] font-semibold">
                     Add to Cart
                   </button>
                 </div>
@@ -788,16 +797,12 @@
             </div>
           </div>
         </div>
-
-        <!-- Navigation Arrows
-        <div class="swiper-button-prev text-zinc-800 hover:text-zinc-700  transition "></div>
-        <div class="swiper-button-next text-zinc-800 hover:text-zinc-700  transition"></div> -->
       </div>
     </section>
     <!-- Featured Services Section Endss Here -->
 
     <!-- Testimonials Section Starts Here -->
-    <section class="py-20 px-20 max-[599px]:px-6 bg-white">
+    <section class="fade6 py-20 px-20 max-[599px]:px-6 bg-white">
       <div class="text-center mb-12">
         <h2 class="text-[2.5vw] max-[599px]:text-[6.5vw] font-bold text-center text-pink-600">
           Testimonials
@@ -905,7 +910,7 @@
     <!-- Testimonials Section Ends Here -->
 
     <!-- How It Work Section Starts Here -->
-    <section class="bg-white p-20 max-[599px]:p-6">
+    <section class="fade7 bg-white p-20 max-[599px]:p-6">
       <div class="flex flex-col lg:flex-row items-center gap-10">
 
         <!-- Left Section -->
@@ -915,13 +920,7 @@
 
           <!-- Step 1 -->
           <div class="flex items-start gap-4 mb-6">
-            <div class="bg-pink-100 text-pink-600 p-3 rounded-full">
-              <!-- icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 8c-1.105 0-2-.672-2-1.5S10.895 5 12 5s2 .672 2 1.5S13.105 8 12 8z" />
-                <path d="M12 22v-9.5m0 0l3.5 3.5m-3.5-3.5l-3.5 3.5" />
-              </svg>
-            </div>
+            <img src="./assets/images/hiw1.svg" alt="">
             <div>
               <h3 class="text-pink-700 font-bold text-lg">Choose Your Service</h3>
               <p class="text-gray-600">
@@ -933,12 +932,7 @@
 
           <!-- Step 2 -->
           <div class="flex items-start gap-4 mb-6">
-            <div class="bg-pink-100 text-pink-600 p-3 rounded-full">
-              <!-- icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2v-6H3v6a2 2 0 002 2z" />
-              </svg>
-            </div>
+            <img src="./assets/images/hiw2.svg" alt="">
             <div>
               <h3 class="text-pink-700 font-bold text-lg">Book Your Appointment</h3>
               <p class="text-gray-600">
@@ -950,12 +944,7 @@
 
           <!-- Step 3 -->
           <div class="flex items-start gap-4">
-            <div class="bg-pink-100 text-pink-600 p-3 rounded-full">
-              <!-- icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4m0-4h8" />
-              </svg>
-            </div>
+            <img src="./assets/images/hiw3.svg" alt="">
             <div>
               <h3 class="text-pink-700 font-bold text-lg">Enjoy the Service</h3>
               <p class="text-gray-600">
@@ -1065,6 +1054,7 @@
 
 <!-- CDNs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
@@ -1147,9 +1137,9 @@
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      0: { slidesPerView: 1 },
-      640: { slidesPerView: 2.5 },
-      768: { slidesPerView: 3.5 },
+      0: { slidesPerView: 2 },
+      640: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
       1024: { slidesPerView: 5 },
     },
   });
@@ -1178,6 +1168,125 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  });
+
+  gsap.from(".anim", {
+    opacity: 0,
+    x : -100,
+    duration: 0.5,
+    willChange: "transform opacity",
+  });
+  gsap.from("nav .logo", {
+    opacity: 0,
+    y : -50,
+    duration: 0.5,
+    willChange: "transform opacity",
+  });
+  gsap.fromTo(".links a", {
+    opacity: 0,
+    y : -50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    stagger: 0.1,
+  },">");
+  gsap.from("nav .authBtn", {
+    opacity: 0,
+    y : -50,
+    duration: 0.5,
+    willChange: "transform opacity",
+  },">");
+  gsap.fromTo(".fade1", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade1",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade2", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade2",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade3", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade3",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade4", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade4",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade5", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade5",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade6", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade6",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade7", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade7",
+      start: "top center",
+      end: "bottom center",
+    }
   });
 </script>
 
