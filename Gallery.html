@@ -7,6 +7,15 @@
   <title>Gallery | Yespreet</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @font-face {
+      font-family: manrope;
+      src: url(./assets/fonts/Manrope.ttf);
+    }
+
+    * {
+      font-family: manrope;
+    }
+
     /* Custom Scrollbar Styles */
     ::-webkit-scrollbar {
       width: 10px;
@@ -33,11 +42,11 @@
   </style>
 </head>
 
-<body class="bg-white text-gray-800">
+<body>
   <!-- Header Starts Here -->
   <header>
     <nav
-      class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
+      class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 max-[599px]:py-2 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
       <div class="logo">
         <a href="index.html">
           <h1
@@ -47,15 +56,15 @@
         </a>
       </div>
 
-      <div class="authBtn flex gap-4 items-center max-[599px]:pl-20 max-[1024px]:pl-[50%] hidden max-[1024px]:block">
+      <div class="authBtn flex gap-4 items-center max-[599px]:pl-16 max-[1024px]:pl-[50%] hidden max-[1024px]:block">
         <button
-          class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
+          class="px-4 py-1 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
           Login Now
         </button>
       </div>
 
       <!-- Mobile & Tablet Menu Icon -->
-      <div class="mobileMenu w-[8%] hidden max-[1024px]:block text-black cursor-pointer">
+      <div class="mobileMenu w-[9%] hidden max-[1024px]:block text-black cursor-pointer">
         <!-- Hamburger Icon -->
         <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
           fill="currentColor">
@@ -81,7 +90,7 @@
         </div>
         <div class="authBtn flex gap-4 items-center">
           <button
-            class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
+            class="px-4 py-1 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
             Login Now
           </button>
         </div>
@@ -90,7 +99,7 @@
 
     <!-- Mobile & Tablet Menu -->
     <div id="mobileNav"
-      class="hidden flex flex-col gap-6 px-6 py-4 bg-white fixed top-14 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[4vw] max-[599px]:text-[5vw]">
+      class="hidden flex flex-col gap-6 max-[599px]:px-6 max-[1024px]:px-10 py-4 bg-white fixed top-12 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[3vw] max-[599px]:text-[5vw]">
       <a href="index.html">Home</a>
       <a href="About.html">About Us</a>
       <a href="Category.html">Categories</a>
@@ -102,18 +111,19 @@
 
   <!-- Gallery Section -->
   <div class="text-center pt-28 pb-10 px-20 max-[599px]:px-6">
-    <h2
-      class="text-[2.5vw] max-[599px]:text-[6.5vw] min-[600px]:max-[1023px]:text-[4vw] font-bold text-center text-pink-600">
-      Gallery
-    </h2>
+    <div class="bg-[#CE1567] text-white w-full pt-2 pb-1 mb-14">
+      <h2 class="anim text-[2.5vw] max-[599px]:text-[6.5vw] min-[600px]:max-[1023px]:text-[4vw] font-bold text-center">
+        Gallery
+      </h2>
 
-    <p
-      class="text-center text-[1.2vw] max-[599px]:text-[3.2vw] min-[600px]:max-[1023px]:text-[2vw] text-gray-600 mt-4 mb-8 w-[75%] max-[599px]:w-full mx-auto">
-      At YESPREET Beauty & Home Services, we provide a wide range of premium beauty and home maintenance solutions,
-      ensuring top-quality service and convenience at your doorstep.
-    </p>
+      <p
+        class="anim text-center text-[1.2vw] max-[599px]:text-[3.2vw] min-[600px]:max-[1023px]:text-[2vw] mb-8 w-[75%] max-[599px]:w-full mx-auto">
+        At YESPREET Beauty & Home Services, we provide a wide range of premium beauty and home maintenance solutions,
+        ensuring top-quality service and convenience at your doorstep.
+      </p>
+    </div>
 
-    <div class="grid grid-cols-4 max-[1023px]:grid-cols-2 max-[599px]:grid-cols-1 gap-4 max-[599px]:gap-2">
+    <div class="fade1 grid grid-cols-4 max-[1023px]:grid-cols-2 max-[599px]:grid-cols-1 gap-4 max-[599px]:gap-2">
 
       <!-- Big Image (2 col desktop / full mobile) -->
       <div class="col-span-2 max-[1023px]:col-span-2 max-[599px]:col-span-1">
@@ -185,10 +195,11 @@
         <p class="italic text-[1.2vw] max-[599px]:text-[3.2vw] mt-1 mb-4">
           Beauty and Home Services
         </p>
-        <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-5 leading-tight">
+        <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-4 leading-tight">
           On-demand services cover a wide range of sectors, including
           transportation, food delivery, home services, healthcare, and more.
         </p>
+        <h1 class="mb-4">Download The App Now</h1>
         <button class="border border-white px-4 py-2 rounded hover:bg-white hover:text-[#C02F78] transition">
           Request a Service
         </button>
@@ -264,6 +275,7 @@
 
   <!-- CDNs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
   <script>
     // Initialize Lenis
@@ -322,6 +334,20 @@
       }
 
       lastScroll = currentScroll;
+    });
+    gsap.from(".anim", {
+      opacity: 0,
+      y: -100,
+      duration: 0.5,
+      willChange: "transform opacity",
+    });
+    gsap.fromTo(".fade1", {
+      opacity: 0,
+      y: 50,
+    }, {
+      opacity: 1,
+      y: 0,
+      willChange: "transform opacity",
     });
   </script>
 </body>

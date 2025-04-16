@@ -7,6 +7,14 @@
   <title>Category | Yespreet</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @font-face {
+      font-family: manrope;
+      src: url(./assets/fonts/Manrope.ttf);
+    }
+
+    * {
+      font-family: manrope;
+    }
     /* Custom Scrollbar Styles */
     ::-webkit-scrollbar {
       width: 10px;
@@ -35,10 +43,10 @@
 
 <body>
   <main class="relative overflow-hidden">
-      <!-- Header Starts Here -->
-    <header>
+     <!-- Header Starts Here -->
+     <header>
       <nav
-        class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
+        class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 max-[599px]:py-2 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
         <div class="logo">
           <a href="index.html">
             <h1
@@ -48,15 +56,15 @@
           </a>
         </div>
 
-        <div class="authBtn flex gap-4 items-center max-[599px]:pl-20 max-[1024px]:pl-[50%] hidden max-[1024px]:block">
+        <div class="authBtn flex gap-4 items-center max-[599px]:pl-16 max-[1024px]:pl-[50%] hidden max-[1024px]:block">
           <button
-            class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
+            class="px-4 py-1 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
             Login Now
           </button>
         </div>
 
         <!-- Mobile & Tablet Menu Icon -->
-        <div class="mobileMenu w-[8%] hidden max-[1024px]:block text-black cursor-pointer">
+        <div class="mobileMenu w-[9%] hidden max-[1024px]:block text-black cursor-pointer">
           <!-- Hamburger Icon -->
           <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
             fill="currentColor">
@@ -82,7 +90,7 @@
           </div>
           <div class="authBtn flex gap-4 items-center">
             <button
-              class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
+              class="px-4 py-1 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
               Login Now
             </button>
           </div>
@@ -91,7 +99,7 @@
 
       <!-- Mobile & Tablet Menu -->
       <div id="mobileNav"
-        class="hidden flex flex-col gap-6 px-6 py-4 bg-white fixed top-14 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[4vw] max-[599px]:text-[5vw]">
+        class="hidden flex flex-col gap-6 max-[599px]:px-6 max-[1024px]:px-10 py-4 bg-white fixed top-12 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[3vw] max-[599px]:text-[5vw]">
         <a href="index.html">Home</a>
         <a href="About.html">About Us</a>
         <a href="Category.html">Categories</a>
@@ -101,73 +109,94 @@
     </header>
     <!-- Header Ends Here -->
 
-    <section
-      class="servicesHome flex items-center w-full h-[60vh] px-20 max-[599px]:px-6 bg-[url(https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover">
-      <h1 class="text-[5vw] max-[599px]:text-[12vw] pt-10 font-semibold text-white">Best Services</h1>
+    <!-- Category's Hero Starts Here -->
+    <section class="servicesHome w-full h-[70vh] bg-[url(./assets/images/aboutBg.png)] bg-cover bg-center">
+      <div class="w-full h-full flex items-center justify-center bg-black/50">
+        <h1 class="anim text-[5vw] max-[599px]:text-[12vw] font-bold text-white pt-10">Category </h1>
+      </div>
     </section>
+    <!-- Category's Hero Ends Here -->
 
-    <section class="p-20 max-[599px]:px-6 max-[599px]:py-20">
-      <div class="flex flex-wrap gap-6 ">
+    <section class="fade1 p-20 max-[599px]:px-6 max-[599px]:py-10">
+      <div class="flex flex-wrap gap-6 max-[599px]:gap-4">
 
         <!-- Card 1 -->
-        <div class="w-full max-[599px]:w-full min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[23%] cursor-pointer">
-          <img src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
-            alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
-          <p
-            class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
-            Hair Care & Treatment</p>
+        <div class="w-full max-[599px]:w-[45%] min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[31%] cursor-pointer">
+          <a href="Sub Category.html">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
+              alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
+            <p
+              class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
+              Women's Salon & Beauty Services</p>
+          </a>
         </div>
 
         <!-- Card 2 -->
-        <div class="w-full max-[599px]:w-full min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[23%] cursor-pointer">
-          <img src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
-            alt="Skin & Makeup" class="rounded-lg shadow-md w-full h-auto" />
-          <p
-            class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
-            Skin & Makeup</p>
+        <div class="w-full max-[599px]:w-[45%] min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[31%] cursor-pointer">
+          <a href="Sub Category.html">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
+              alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
+            <p
+              class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
+              Bridal Makeup & Mehendi Art</p>
+          </a>
         </div>
 
         <!-- Card 3 -->
-        <div class="w-full max-[599px]:w-full min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[23%] cursor-pointer">
-          <img src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
-            alt="Nail & Hand Care" class="rounded-lg shadow-md w-full h-auto" />
-          <p
-            class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
-            Nail & Hand Care</p>
+        <div class="w-full max-[599px]:w-[45%] min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[31%] cursor-pointer">
+          <a href="Sub Category.html">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
+              alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
+            <p
+              class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
+              Men's Grooming & Salon Services</p>
+          </a>
         </div>
 
         <!-- Card 4 -->
-        <div class="w-full max-[599px]:w-full min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[23%] cursor-pointer">
-          <img src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
-            alt="Waxing" class="rounded-lg shadow-md w-full h-auto" />
-          <p
-            class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
-            Waxing & Threading</p>
+        <div class="w-full max-[599px]:w-[45%] min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[31%] cursor-pointer">
+          <a href="Sub Category.html">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
+              alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
+            <p
+              class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
+              Home Repair & Maintenance</p>
+          </a>
         </div>
 
         <!-- Card 5 -->
-        <div class="w-full max-[599px]:w-full min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[23%] cursor-pointer">
-          <img src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
-            alt="Party Services" class="rounded-lg shadow-md w-full h-auto" />
-          <p
-            class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
-            Party & Special Occasion Services</p>
+        <div class="w-full max-[599px]:w-[45%] min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[31%] cursor-pointer">
+          <a href="Sub Category.html">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
+              alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
+            <p
+              class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
+              Party & Special Occasion Services</p>
+          </a>
         </div>
 
         <!-- Card 6 -->
-        <div class="w-full max-[599px]:w-full min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[23%] cursor-pointer">
-          <img src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
-            alt="Eyebrow Services" class="rounded-lg shadow-md w-full h-auto" />
-          <p
-            class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
-            Eyebrow & Eyelash Services</p>
+        <div class="w-full max-[599px]:w-[45%] min-[600px]:w-[48%] max-[1023px]:w-[48%] lg:w-[31%] cursor-pointer">
+          <a href="Sub Category.html">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661380558859-40df8dd91dfd?q=80&w=1470&auto=format&fit=crop"
+              alt="Hair Care" class="rounded-lg shadow-md w-full h-auto" />
+            <p
+              class="text-[#C2006B] text-[1.5vw] max-[599px]:text-[4vw] max-[1023px]:text-[2.5vw] font-semibold mt-4 pl-4">
+              Eyebrow & Eyelash Services</p>
+          </a>
         </div>
 
       </div>
     </section>
 
     <!-- Download The APP Section Starts Here -->
-    <section class="bg-white max-[599px]:px-6 min-[600px]:max-[1023px]:px-10 flex items-center justify-center">
+    <section class="fade2 bg-white max-[599px]:px-6 min-[600px]:max-[1023px]:px-10 flex items-center justify-center">
       <div
         class="w-[70%] max-[599px]:w-full min-[600px]:max-[1023px]:w-[90%] flex flex-col md:flex-row items-center justify-between gap-10">
 
@@ -225,10 +254,11 @@
           <p class="italic text-[1.2vw] max-[599px]:text-[3.2vw] mt-1 mb-4">
             Beauty and Home Services
           </p>
-          <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-5 leading-tight">
+          <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-4 leading-tight">
             On-demand services cover a wide range of sectors, including
             transportation, food delivery, home services, healthcare, and more.
           </p>
+          <h1 class="mb-4">Download The App Now</h1>
           <button class="border border-white px-4 py-2 rounded hover:bg-white hover:text-[#C02F78] transition">
             Request a Service
           </button>
@@ -307,6 +337,7 @@
 </main>
 <!-- CDNs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
 <script>
   // Initialize Lenis
@@ -365,6 +396,39 @@
     }
 
     lastScroll = currentScroll;
+  });
+
+  gsap.from(".anim", {
+    opacity: 0,
+    y: -100,
+    duration: 0.5,
+    willChange: "transform opacity",
+  });
+  gsap.fromTo(".fade1", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade1",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
+  gsap.fromTo(".fade2", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade2",
+      start: "top center",
+      end: "bottom center",
+    }
   });
 </script>
 </body>

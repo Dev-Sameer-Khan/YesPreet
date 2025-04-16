@@ -7,6 +7,15 @@
   <title>All Services | Yespreet</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @font-face {
+      font-family: manrope;
+      src: url(./assets/fonts/Manrope.ttf);
+    }
+
+    * {
+      font-family: manrope;
+    }
+
     /* Custom Scrollbar Styles */
     ::-webkit-scrollbar {
       width: 10px;
@@ -35,10 +44,10 @@
 
 <body>
   <main class="relative overflow-hidden">
-    <!-- Header Starts Here -->
-    <header>
+     <!-- Header Starts Here -->
+     <header>
       <nav
-        class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
+        class="w-full px-20 max-[1024px]:px-10 max-[599px]:px-6 py-4 max-[599px]:py-2 bg-white fixed top-0 left-0 z-[999] flex items-center justify-between">
         <div class="logo">
           <a href="index.html">
             <h1
@@ -48,15 +57,15 @@
           </a>
         </div>
 
-        <div class="authBtn flex gap-4 items-center max-[599px]:pl-20 max-[1024px]:pl-[50%] hidden max-[1024px]:block">
+        <div class="authBtn flex gap-4 items-center max-[599px]:pl-16 max-[1024px]:pl-[50%] hidden max-[1024px]:block">
           <button
-            class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
+            class="px-4 py-1 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
             Login Now
           </button>
         </div>
 
         <!-- Mobile & Tablet Menu Icon -->
-        <div class="mobileMenu w-[8%] hidden max-[1024px]:block text-black cursor-pointer">
+        <div class="mobileMenu w-[9%] hidden max-[1024px]:block text-black cursor-pointer">
           <!-- Hamburger Icon -->
           <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
             fill="currentColor">
@@ -82,7 +91,7 @@
           </div>
           <div class="authBtn flex gap-4 items-center">
             <button
-              class="px-4 py-2 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
+              class="px-4 py-1 border-2 border-pink-600 hover:bg-pink-700 transition-all bg-pink-600 text-white rounded-full">
               Login Now
             </button>
           </div>
@@ -91,7 +100,7 @@
 
       <!-- Mobile & Tablet Menu -->
       <div id="mobileNav"
-        class="hidden flex flex-col gap-6 px-6 py-4 bg-white fixed top-14 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[4vw] max-[599px]:text-[5vw]">
+        class="hidden flex flex-col gap-6 max-[599px]:px-6 max-[1024px]:px-10 py-4 bg-white fixed top-12 w-full z-[998] text-black text-[6vw] font-medium max-[1024px]:text-[3vw] max-[599px]:text-[5vw]">
         <a href="index.html">Home</a>
         <a href="About.html">About Us</a>
         <a href="Category.html">Categories</a>
@@ -101,16 +110,20 @@
     </header>
     <!-- Header Ends Here -->
 
-    <section
-      class="servicesHome flex items-center w-full h-[60vh] px-20 max-[599px]:px-6 bg-[url(https://images.unsplash.com/photo-1577466802315-e80bbbb22a08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover">
-      <h1 class="text-[5vw] max-[599px]:text-[12vw] font-semibold text-white pt-10">All Services</h1>
+    <!-- Service's Hero Starts Here -->
+    <section class="servicesHome w-full h-[70vh] bg-[url(./assets/images/aboutBg.png)] bg-cover bg-center">
+      <div class="w-full h-full flex items-center justify-center bg-black/50">
+        <h1 class="anim text-[5vw] max-[599px]:text-[12vw] font-bold text-white pt-10 ">All Services</h1>
+      </div>
     </section>
+    <!-- Service's Hero Ends Here -->
 
     <section
-      class="w-full px-20 max-[599px]:px-6 max-[1024px]:px-10 py-10 flex items-center justify-center gap-10 flex-wrap">
+      class="fade1 w-full px-20 max-[599px]:px-6 max-[1024px]:px-10 py-10 flex items-center justify-center gap-10 flex-wrap">
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -134,7 +147,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -158,7 +172,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -182,7 +197,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -206,7 +222,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -230,7 +247,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -254,7 +272,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -278,7 +297,8 @@
       </div>
       <div class="bg-blue-100 rounded-xl overflow-hidden shadow-sm">
         <div class="relative overflow-hidden">
-          <img src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
+          <img
+            src="https://s3-alpha-sig.figma.com/img/af1f/7717/c639d29d23b61f589e42c6c0a7607d70?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YI-9-HvugiDqb~vlyFeY7iVY4N9nouGSM~74nBSJGhgk9RUD2GNW2kv1rqmnTr-e8T8YeM6S8yucxKPngHJeZ33TbyzdFWuGjabZqIm6iEx7uldZXqOJF~y0D5CIpHgD81MUqdcC9Rr6sRrX7MhYdSkU0X0RDb1YGxGwCXgLWLidMWRahFujicusLJe9jHd380NyDpbcewA5kE7B51EpoipP6CDXpFr8xDchbahEL6n6v7CIyNLXUEosvAlQ9tLXZe9ZggbijflapQDuv2yPlBimd9HprsXRj~eMdG~UR6j9jWFd~QGyVgZeG1vXNG60YjK06l7bUUMJ5pXUVYo-5Q__"
             alt="Basic Hair Cut" class="w-full h-44 object-cover" />
           <span
             class="absolute top-2 -left-2 bg-pink-700 text-white text-[0.8vw] max-[599px]:text-[2.8w] font-bold pr-2 pl-4 py-1 rounded">
@@ -311,10 +331,11 @@
           <p class="italic text-[1.2vw] max-[599px]:text-[3.2vw] mt-1 mb-4">
             Beauty and Home Services
           </p>
-          <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-5 leading-tight">
+          <p class="text-[1.2vw] max-[599px]:text-[3.2vw] mb-4 leading-tight">
             On-demand services cover a wide range of sectors, including
             transportation, food delivery, home services, healthcare, and more.
           </p>
+          <h1 class="mb-4">Download The App Now</h1>
           <button class="border border-white px-4 py-2 rounded hover:bg-white hover:text-[#C02F78] transition">
             Request a Service
           </button>
@@ -393,6 +414,7 @@
 </main>
 <!-- CDNs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
 <script>
   // Initialize Lenis
@@ -452,7 +474,26 @@
 
     lastScroll = currentScroll;
   });
-  
+
+  gsap.from(".anim", {
+    opacity: 0,
+    y: -100,
+    duration: 0.5,
+    willChange: "transform opacity",
+  });
+  gsap.fromTo(".fade1", {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    willChange: "transform opacity",
+    scrollTrigger: {
+      trigger: ".fade1",
+      start: "top center",
+      end: "bottom center",
+    }
+  });
 </script>
 </body>
 
